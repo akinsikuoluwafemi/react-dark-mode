@@ -15,6 +15,11 @@ body {
 
 }
 
+.light-mode div {
+  transition: background-color 0.25s ease-out;
+
+}
+
 .dark-mode {
     background-color: #1a1919;
     color: #999;
@@ -24,6 +29,10 @@ body {
 
 .dark-mode nav {
     background-color: #1b2938;
+  transition: background-color 0.25s ease-out;
+
+}
+.dark-mode div {
   transition: background-color 0.25s ease-out;
 
 }

@@ -56,7 +56,11 @@ function App(){
             <main>
                 <h1>{darkMode ? "dark mode" : "Light mode"}</h1>
                 <h2>Toggle the switch to see some magic happen!</h2>
+                <div style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                </div>
             </main>
+            
         </div>
     );
 }
