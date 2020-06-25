@@ -1,9 +1,26 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
+import Anime from './gsap';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 import "./styles.css";
 
 function App(){
+    
+    useEffect(() => {
+        Aos.init({
+            
+            duration: 2000
+        
+        });
+    }, [])
+
+    
+    
+
+
+
     const [darkMode, setDarkMode] = React.useState(getInitialmode());
     React.useEffect(() => {
         localStorage.setItem('dark', JSON.stringify(darkMode))
@@ -35,6 +52,8 @@ function App(){
         return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
 
+    
+
     return (
         <div className={darkMode ? "dark-mode" : "light-mode"}>
             <nav>
@@ -56,7 +75,23 @@ function App(){
             <main>
                 <h1>{darkMode ? "dark mode" : "Light mode"}</h1>
                 <h2>Toggle the switch to see some magic happen!</h2>
-                <div style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+
+                <div className="boxes" style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                </div>
+
+                <div className="boxes" style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                </div>
+
+                <div data-aos="fade-up" className="boxes" style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                </div>
+
+                <div data-aos="fade-right" className="boxes" style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                </div>
+                <div data-aos="flip-up" className="boxes" style={{ height: '30vh', background: darkMode ? "green" : "#666", color: darkMode ? "white" : "#000" }}>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                 </div>
             </main>
@@ -66,4 +101,4 @@ function App(){
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Anime />, rootElement);
