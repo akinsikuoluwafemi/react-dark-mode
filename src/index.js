@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import ReactDOM from "react-dom";
-import Anime from './gsap';
+// import Anime from './gsap';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 
@@ -17,9 +17,6 @@ function App(){
     }, [])
 
     
-    
-
-
 
     const [darkMode, setDarkMode] = React.useState(getInitialmode());
     React.useEffect(() => {
@@ -101,4 +98,6 @@ function App(){
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Anime />, rootElement);
+// ReactDOM.render(<Anime />, rootElement);
+ReactDOM.render(<App />, rootElement);
+

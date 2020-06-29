@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { TweenMax, Power3 } from 'gsap';
+import React, { useEffect, useRef } from 'react';
+import { TweenMax } from 'gsap';
 import logo from './logo.png';
 
 function Anime () {
@@ -23,9 +23,9 @@ function Anime () {
     return (
         <div >
             <img
-                ref={el => {logoItem = el}}
+                ref={el => { logoItem = el }}
             
-                src={logo} />
+                src={logo} alt="" />
 
         </div>
             
